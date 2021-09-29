@@ -1,17 +1,24 @@
 import React from "react";
 
 class WeatherCard extends React.Component {
-    componentDidMount() {
-        this.props.apiResponses.forEach(element => {
-            // console.log(element)
-        });        
+
+
+
+
+    goBack() {
+        window.history.back();
     }
 
     render() {
         return (
             <div>
-                {/* {this.props.} */}
-                O que será?
+
+                <button onClick={() => window.history.back()}>
+                    Voltar
+                </button>
+
+                {this.props.city_name.toUpperCase()}
+
             </div>
         );
     }
