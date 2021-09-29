@@ -1,6 +1,10 @@
 import React from "react";
+
 import { WeatherApiGetData } from "../ExternalAPIs/Weather/WeatherAPI";
+
 import WeatherCard from "./WeatherCard";
+
+import { withRouter } from 'react-router-dom';
 
 class CityWeather extends React.Component {
     constructor() {
@@ -13,7 +17,7 @@ class CityWeather extends React.Component {
     async componentDidMount() {
         let responses = []
         for (const hour of this.props.hours) {
-            const response = await WeatherApiGetData({ city: this.props.city, days: 1, hour: hour });
+            const response = await WeatherApiGetData({ city: this.props.key, days: 1, hour: hour });
             responses.push(response)
         }
         this.setState({ apiResponses: responses }, 
@@ -31,4 +35,4 @@ class CityWeather extends React.Component {
     }
 }
 
-export default CityWeather
+export default withRouter(CityWeather);

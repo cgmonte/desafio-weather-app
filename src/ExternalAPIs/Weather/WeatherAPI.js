@@ -14,5 +14,4 @@ export async function WeatherApiGetData({ city, days, hour }) {
     } catch (error) {
         console.error(error);
     }
-
 }
