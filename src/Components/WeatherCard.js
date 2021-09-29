@@ -1,14 +1,6 @@
 import React from "react";
 
 class WeatherCard extends React.Component {
-
-
-
-
-    goBack() {
-        window.history.back();
-    }
-
     render() {
         return (
             <div>
