@@ -8,12 +8,11 @@ import Home from './Components/Home';
 
 function App() {
 
-  const cities = ['dallol', 'fairbanks', 'londres', 'recife', 'vancouver', 'yakutsk']
-  const hours = [3, 9, 15, 21]
+  const cities = ['fairbanks', 'londres', 'recife', 'vancouver', 'yakutsk']
 
   const routes = cities.map((city) =>
     <Route path={'/' + city} key={city}>
-      <CityWeather hours={hours}/>
+      <CityWeather />
     </Route>
   );
 
@@ -26,7 +25,6 @@ function App() {
         <Route path="/home">
           <Home
             cities={cities}
-            hours={hours}
           />
         </Route>
         {routes}
