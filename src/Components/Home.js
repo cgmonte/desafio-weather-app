@@ -6,19 +6,8 @@ class Home extends React.Component {
     constructor(props) {
         super(props)
         this.buttons = this.props.cities.map((city) =>
-            <button
-                key={city}
-                onClick={() => this.OnClickFunction(city)}>
-                {city}
-            </button>
+            <a href={"/" + city}>{city}</a>
         );
-    }
-
-    OnClickFunction = (city) => {
-        this.props.history.push({
-            pathname: "/" + city,
-
-        });
     }
 
     render() {

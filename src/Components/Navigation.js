@@ -4,9 +4,7 @@ class Navigation extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={() => window.history.back()}>
-                    Voltar
-                </button>
+                <a href={"/"}>Voltar</a>
             </div>
         );
     }
