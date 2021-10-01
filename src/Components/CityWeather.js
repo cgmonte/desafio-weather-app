@@ -10,6 +10,8 @@ import Navigation from "./Navigation";
 
 import "./Global.scss";
 
+import * as utils from "../lib/utils";
+
 class CityWeather extends React.Component {
     constructor(props) {
         super(props);
@@ -50,7 +52,7 @@ class CityWeather extends React.Component {
                 }
                 other_info = {
                     'current_humidity': responses[i].data.current.humidity,
-                    'current_wind_speed': Number.parseFloat((responses[i].data.current.wind_kph / 3.6)).toFixed(2),
+                    'current_wind_speed': utils.unitConvertKphMs(responses[i].data.current.wind_kph),
                     'today_sunrise': responses[i].data.forecast.forecastday[0].astro.sunrise,
                     'today_sunset': responses[i].data.forecast.forecastday[0].astro.sunset
                 }
@@ -95,7 +97,7 @@ class CityWeather extends React.Component {
                 <Navigation />
                 {this.state.fetching_data ?
                     (
-                        <h2> Loadind data </h2>
+                        <h2> Loading data </h2>
                     ) : (
                         <WeatherCard
                             city_name={this.state.city_name}
