@@ -46,7 +46,7 @@ class CityWeather extends React.Component {
                     'current_temperature': responses[i].data.current.temp_c,
                     'current_icon_url': responses[i].data.current.condition.icon,
                     'today_min_temperature': responses[i].data.forecast.forecastday[0].day.mintemp_c,
-                    'today_max_temperature': responses[i].data.forecast.forecastday[0].day.maxtemp_c,                    
+                    'today_max_temperature': responses[i].data.forecast.forecastday[0].day.maxtemp_c,
                 }
                 other_info = {
                     'current_humidity': responses[i].data.current.humidity,
@@ -55,7 +55,7 @@ class CityWeather extends React.Component {
                     'today_sunset': responses[i].data.forecast.forecastday[0].astro.sunset
                 }
             }
-            
+
             switch (responses[i].data.forecast.forecastday[0].hour[0].time.slice(11, -3)) {
                 case '03':
                     // forecast['dawn_condition'] = responses[i].data.forecast.forecastday[0].hour[0].condition.text
@@ -82,14 +82,16 @@ class CityWeather extends React.Component {
             }
         }
 
-        this.setState({ weather_data: [current_weather, forecast_weather, other_info], fetching_data: false}, function () {
-            console.log(this.state.weather_data)
-        })
+        this.setState({ weather_data: [current_weather, forecast_weather, other_info], fetching_data: false },
+            // function () {
+            //     console.log(this.state.weather_data)
+            // }
+        )
     }
 
     render() {
         return (
-            <div id="outer_div">
+            <div id="outer-div">
                 <Navigation />
                 {this.state.fetching_data ?
                     (

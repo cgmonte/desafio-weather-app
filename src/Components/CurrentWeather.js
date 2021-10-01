@@ -25,11 +25,10 @@ class CurrentWeather extends React.Component {
 
                     </div>
 
+                </div>
 
-                    <div id="curret-weather-img-div">
-                        <img alt={this.props.data.current_condition} src={this.props.data.current_icon_url} />
-                    </div>
-
+                <div id="curret-weather-img-div">
+                    <img id="current-temp-img" alt={this.props.data.current_condition} src={this.props.data.current_icon_url} />
                 </div>
 
             </div>

@@ -1,4 +1,78 @@
-#outer_div {
+#outer-div {
     display: flex;
     flex-direction: column;
+    // max-width: 900px;
+}
+
+#main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // max-width: 900px;
+}
+
+.forecast-section-div {
+    display: flex;
+    flex-direction: row;
+}
+
+#current-weather-info-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-section-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-data, 
+.forecast-temp-data {
+    margin-top: -0.4em;
+}
+
+.forecast-img {
+    margin-top: -0.9em;
+}
+
+.footer-dub-section-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: 0.5em;
+}
+
+.forecasts-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: 0.8em;
+}
+
+#current-temp-data {
+    font-size: 7em;
+    margin-top: -0.1em;
+    margin-bottom: -0.1em;
+}
+
+#curret-weather-img-div,
+#current-weather-info-div {
+    display: flex;
+    justify-content: center;
+}
+
+#current-temp-img {
+    height: 300px;
+    margin-top: -3em;
+    margin-bottom: -0.5em;
+}
+
+.curren-condition-title {
+    text-align: center;
+}
+
+#city-name {
+    font-size: 2em;
+    margin-bottom: -0.2em;
+    margin-top: 0.5em;
 }
