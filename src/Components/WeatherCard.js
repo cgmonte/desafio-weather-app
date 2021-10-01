@@ -1,15 +1,25 @@
 import React from "react";
 
+import CurrentWeather from "./CurrentWeather";
+
+import ForecastWeather from "./ForecastWeather";
+
+import FooterInfo from "./FooterInfo";
+
+import "./Global.scss";
+
 class WeatherCard extends React.Component {
     render() {
         return (
-            <div>
+            <div id="main-content">
 
-                <button onClick={() => window.history.back()}>
-                    Voltar
-                </button>
+                <p id="city-name"> {this.props.city_name.toUpperCase()} </p>
 
-                {this.props.city_name.toUpperCase()}
+                <CurrentWeather data={this.props.weather_data[0]} />
+
+                <ForecastWeather data={this.props.weather_data[1]} />
+
+                <FooterInfo data={this.props.weather_data[2]} />
 
             </div>
         );
