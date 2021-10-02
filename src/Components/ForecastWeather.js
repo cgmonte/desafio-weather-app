@@ -1,35 +1,29 @@
 import "./Global.scss";
 
+import { IconContext } from "react-icons";
+
+import { getIcon } from "../lib/utils";
+
 function ForecastWeather(props) {
-        return (
-            <div className="forecast-section-div">
+    
+    const ForecastIcon = getIcon({
+        isDay: props.data.is_day,
+        conditionCode: props.data.condition_code
+    })
 
-                <div className="forecasts-div">
-                    <p className="forecast-title">dawn</p>
-                    <img className="forecast-img" alt={props.data.dawn_icon_url} src={props.data.dawn_icon_url} />
-                    <p className="forecast-temp-data">{props.data.dawn_temperature} C</p>
-                </div>
+    return (
+        <div className="forecast-section-div">
 
-                <div className="forecasts-div">
-                    <p className="forecast-title">morning</p>
-                    <img className="forecast-img" alt={props.data.morning_icon_url} src={props.data.morning_icon_url} />
-                    <p className="forecast-temp-data">{props.data.morning_temperature} C</p>
-                </div>
-
-                <div className="forecasts-div">
-                    <p className="forecast-title">afternoon</p>
-                    <img className="forecast-img" alt={props.data.afternoon_icon_url} src={props.data.afternoon_icon_url} />
-                    <p className="forecast-temp-data">{props.data.afternoon_temperature} C</p>
-                </div>
-
-                <div className="forecasts-div">
-                    <p className="forecast-title">night</p>
-                    <img className="forecast-img" alt={props.data.night_icon_url} src={props.data.night_icon_url} />
-                    <p className="forecast-temp-data">{props.data.night_temperature} C</p>
-                </div>
-
+            <div className="forecasts-div">
+                <p className="forecast-title">{props.name}</p>
+                <IconContext.Provider value={{ size: "5em", color: "black", className: "global-class-name" }}>
+                    <ForecastIcon />
+                </IconContext.Provider>
+                <p className="forecast-temp-data">{props.data.temperature} C</p>
             </div>
-        );
+
+        </div>
+    );
 }
 
 export default ForecastWeather

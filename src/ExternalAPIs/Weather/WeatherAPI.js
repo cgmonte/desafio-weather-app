@@ -20,32 +20,47 @@ export async function weatherApiGetData({ city, days }) {
 export function weatherApiProcessData({ weatherApiResponse }) {
     try {
         const currentWeather = {
+            'last_updated': weatherApiResponse.data.current.last_updated,
+            'is_day': weatherApiResponse.data.current.is_day,
             'current_condition': weatherApiResponse.data.current.condition.text,
+            'current_condition_code': weatherApiResponse.data.current.condition.code,
             'current_temperature': weatherApiResponse.data.current.temp_c,
-            'current_icon_url': weatherApiResponse.data.current.condition.icon,
             'today_min_temperature': weatherApiResponse.data.forecast.forecastday[0].day.mintemp_c,
             'today_max_temperature': weatherApiResponse.data.forecast.forecastday[0].day.maxtemp_c,
         }
 
-        let forecastWeather = {}
+        let forecastWeather = {
+            dawn: {},
+            morning: {},
+            afternoon: {},
+            night: {},
+        }
 
         for (const hour of weatherApiResponse.data.forecast.forecastday[0].hour) {
             switch (hour.time.slice(11, -3)) {
                 case '03':
-                    forecastWeather['dawn_icon_url'] = hour.condition.icon
-                    forecastWeather['dawn_temperature'] = hour.temp_c
+                    forecastWeather.dawn['icon_url'] = hour.condition.icon
+                    forecastWeather.dawn['condition_code'] = hour.condition.code
+                    forecastWeather.dawn['is_day'] = hour.is_day
+                    forecastWeather.dawn['temperature'] = hour.temp_c
                     break;
                 case '09':
-                    forecastWeather['morning_icon_url'] = hour.condition.icon
-                    forecastWeather['morning_temperature'] = hour.temp_c
+                    forecastWeather.morning['icon_url'] = hour.condition.icon
+                    forecastWeather.morning['condition_code'] = hour.condition.code
+                    forecastWeather.morning['is_day'] = hour.is_day
+                    forecastWeather.morning['temperature'] = hour.temp_c
                     break;
                 case '15':
-                    forecastWeather['afternoon_icon_url'] = hour.condition.icon
-                    forecastWeather['afternoon_temperature'] = hour.temp_c
+                    forecastWeather.afternoon['icon_url'] = hour.condition.icon
+                    forecastWeather.afternoon['condition_code'] = hour.condition.code
+                    forecastWeather.afternoon['is_day'] = hour.is_day                    
+                    forecastWeather.afternoon['temperature'] = hour.temp_c
                     break;
                 case '21':
-                    forecastWeather['night_icon_url'] = hour.condition.icon
-                    forecastWeather['night_temperature'] = hour.temp_c
+                    forecastWeather.night['icon_url'] = hour.condition.icon
+                    forecastWeather.night['condition_code'] = hour.condition.code
+                    forecastWeather.night['is_day'] = hour.is_day     
+                    forecastWeather.night['temperature'] = hour.temp_c
                     break;
                 default:
                     break;

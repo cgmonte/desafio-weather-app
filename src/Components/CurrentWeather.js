@@ -1,10 +1,20 @@
 import "./Global.scss";
 
+import { IconContext } from "react-icons";
+
+import { getIcon } from "../lib/utils";
+
 function CurrentWeather(props) {
+
+    const MainIcon = getIcon({
+        isDay: props.data.is_day,
+        conditionCode: props.data.current_condition_code
+    })
+
     return (
         <div>
 
-            <p className="curren-condition-title">{props.data.current_condition}</p>
+            <p className="curren-condition-title">{props.data.current_condition.toLowerCase()}</p>
 
 
             <div id="current-weather-info-div">
@@ -25,7 +35,9 @@ function CurrentWeather(props) {
             </div>
 
             <div id="curret-weather-img-div">
-                <img id="current-temp-img" alt={props.data.current_condition} src={props.data.current_icon_url} />
+                <IconContext.Provider value={{ size: "12em", color: "black", className: "global-class-name" }}>
+                    <MainIcon />
+                </IconContext.Provider>
             </div>
 
         </div>

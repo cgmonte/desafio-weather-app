@@ -3,7 +3,7 @@ import { weatherApiGetData, weatherApiProcessData } from "../ExternalAPIs/Weathe
 import { withRouter } from 'react-router-dom';
 
 import CurrentWeather from "./CurrentWeather";
-import ForecastWeather from "./ForecastWeather";
+import ForecastSection from "./ForecastSection";
 import FooterInfo from "./FooterInfo";
 import Navigation from "./Navigation";
 
@@ -27,7 +27,7 @@ class CityWeather extends React.Component {
 
         this.setState({ weatherData: weatherData, fetchingData: false },
             function () {
-                console.log(this.state.weatherData)
+                // console.log(this.state.weatherData)
             }
         )
     }
@@ -47,7 +47,7 @@ class CityWeather extends React.Component {
 
                             <CurrentWeather data={this.state.weatherData.currentWeather} />
 
-                            <ForecastWeather data={this.state.weatherData.forecastWeather} />
+                            <ForecastSection data={this.state.weatherData.forecastWeather} />
 
                             <FooterInfo data={this.state.weatherData.otherInfo} />
 
