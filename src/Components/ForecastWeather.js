@@ -2,14 +2,9 @@ import "./Global.scss";
 
 import { IconContext } from "react-icons";
 
-import { getIcon } from "../lib/utils";
+import Icon from "./Icon";
 
 function ForecastWeather(props) {
-    
-    const ForecastIcon = getIcon({
-        isDay: props.data.is_day,
-        conditionCode: props.data.condition_code
-    })
 
     return (
 
@@ -18,7 +13,7 @@ function ForecastWeather(props) {
                 <IconContext.Provider value={{ 
                     size: "3.5em", 
                     className: "small-icon" }}>
-                    <ForecastIcon />
+                    <Icon isDay={props.data.is_day} conditionCode={props.data.condition_code} />
                 </IconContext.Provider>
                 <p className="forecast-data">{props.data.temperature} &deg;C</p>
             </div>

@@ -2,16 +2,11 @@ import "./Global.scss";
 
 import { IconContext } from "react-icons";
 
-import { getIcon } from "../lib/utils";
+import Icon from "./Icon";
 
 import { HiOutlineArrowNarrowUp, HiOutlineArrowNarrowDown } from "react-icons/hi";
 
 function CurrentWeather(props) {
-
-    const MainIcon = getIcon({
-        isDay: props.data.is_day,
-        conditionCode: props.data.current_condition_code
-    })
 
     return (
         <div id="current-weather-div">
@@ -54,7 +49,7 @@ function CurrentWeather(props) {
 
             <div id="curret-weather-icon-div">
                 <IconContext.Provider value={{ size: "10em", color: "black", className: "big-icon" }}>
-                    <MainIcon />
+                    <Icon isDay={props.isDay} conditionCode={props.data.current_condition_code} />
                 </IconContext.Provider>
             </div>
 
