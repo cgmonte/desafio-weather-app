@@ -12,14 +12,16 @@ body {
 #root {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
+    height: 100px;
 }
 
 #outer-div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;              // max-width: 750px;
+    width: 100vw;
+    height: 100px;
 }
 
 #city-name {
@@ -28,10 +30,10 @@ body {
 }
 
 #back-link-icon {
-    padding-left: 2.1em;
+    // padding-left: 0.1em;
     padding-top: 1em;
     padding-bottom: 1em;
-    width: 100%;
+    width: calc(100% - 2.1em);
 }
 
 .grow-box {
@@ -58,14 +60,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 23.5em;
+    width: 100vw;
 }
 
 #current-weather-div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 100vw;
 }
 
 #current-condition-title {
@@ -107,7 +109,7 @@ body {
 .forecast-section-div {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 100vw;
     // padding-top: 0.7em;
     margin-top: -0.2em;
     justify-content: space-around;
@@ -163,7 +165,8 @@ body {
     padding-top: 3.3em;
     // padding-left: 3em;
     // padding-right: 5em;
-    // width: 100%;
+    width: 100vw;
+    justify-content: center;
     // justify-content:space-evenly;
 }
 
@@ -178,7 +181,7 @@ body {
 
 .footer-data {
     font-size: 0.92em;
-    padding-top: 0.5em;
+    padding-top: 0.6em;
     color: rgba($color: #000000, $alpha: 0.6);
 }
 
