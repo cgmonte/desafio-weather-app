@@ -4,19 +4,20 @@ import { RiArrowLeftLine } from 'react-icons/ri';
 
 import { IconContext } from "react-icons";
 
+import { Link } from "react-router-dom";
+
 function Navigation() {
-    return (
-        <div id="back-link-icon">
-            <a href={"/"}>
-                <IconContext.Provider value={{ size: "2em", color: "black" }}>
+    return <div id="back-link-icon">
+        <Link to='/'>
+            <IconContext.Provider value={{ size: "2em", color: "black" }}>
 
-                    <RiArrowLeftLine />
+                <RiArrowLeftLine />
 
-                </IconContext.Provider>
-            </a>
+            </IconContext.Provider>
 
-        </div>
-    );
+
+        </Link>
+    </div>
 }
 
 export default Navigation
