@@ -2,6 +2,13 @@
     margin: 0;
 }
 
+body {
+    background-image: url('../images/mobile_ref1.png');
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;    
+}
+
 #root {
     display: flex;
     justify-content: center;
@@ -12,11 +19,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    
-    // background-image: url('../images/mobile_ref1.png');
-    // background-size: 100%;   
-    // max-width: 750px;
+    width: 100%;              // max-width: 750px;
 }
 
 #city-name {
