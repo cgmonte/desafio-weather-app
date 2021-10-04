@@ -2,13 +2,21 @@
     margin: 0;
 }
 
+#root {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 #outer-div {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
+    
     // background-image: url('../images/mobile_ref1.png');
     // background-size: 100%;   
-    max-width: 750px;
+    // max-width: 750px;
 }
 
 #city-name {
@@ -17,7 +25,10 @@
 }
 
 #back-link-icon {
-    padding: 1em;
+    padding-left: 2.1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 100%;
 }
 
 .grow-box {
@@ -44,7 +55,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 23.5em;
 }
 
 #current-weather-div {
@@ -109,7 +120,7 @@
 .forecast-data {
     margin-top: -0.2em;
     font-size: 1.2em;
-    color: rgba($color: #000000, $alpha: 0.9);
+    color: rgba($color: #000000, $alpha: 0.6);
 }
 
 .footer-dub-section-div {
@@ -123,7 +134,7 @@
     margin-bottom: -0.01em;
     padding-bottom: 0px ;
     padding-top: -10px;
-    color: rgba($color: #000000, $alpha: 0.8);
+    color: rgba($color: #000000, $alpha: 0.6);
 
 }
 
