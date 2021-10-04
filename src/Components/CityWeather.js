@@ -41,7 +41,7 @@ class CityWeather extends React.Component {
                         <h2> Loading data </h2>
                     ) : (
 
-                        <div id="main-content">
+                        <div id="main-content-div">
 
                             <p id="city-name"> {this.state.cityName.toUpperCase()} </p>
 

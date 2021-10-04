@@ -12,17 +12,17 @@ function ForecastWeather(props) {
     })
 
     return (
-        <div className="forecast-section-div">
 
             <div className="forecasts-div">
                 <p className="forecast-title">{props.name}</p>
-                <IconContext.Provider value={{ size: "5em", color: "black", className: "global-class-name" }}>
+                <IconContext.Provider value={{ 
+                    size: "3.5em", 
+                    className: "small-icon" }}>
                     <ForecastIcon />
                 </IconContext.Provider>
-                <p className="forecast-temp-data">{props.data.temperature} C</p>
+                <p className="forecast-data">{props.data.temperature} &deg;C</p>
             </div>
 
-        </div>
     );
 }
 
