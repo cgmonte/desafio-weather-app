@@ -1,20 +1,25 @@
 import React from "react"
+
 import * as icons from 'react-icons/wi'
+
+import { IconContext } from "react-icons"
 
 import weatherConditions from '../data/weather_conditions.json'
 
-export const Icon = ({ isDay, conditionCode }) => {
-  const weatherCondition = weatherConditions.filter(condition => condition.code === conditionCode);
+export const Icon = ({ small, isDay, conditionCode }) => {
 
-  let ReactIcon;
+  const { react_icon_day, react_icon_night } = weatherConditions.find(condition => condition.code === conditionCode)
 
-  if (isDay === 1) {
-    ReactIcon = icons[weatherCondition[0].react_icon_day]
-  } else {
-    ReactIcon = icons[weatherCondition[0].react_icon_night]
-  }
+  const WiIcon = icons[isDay === 1 ? react_icon_day : react_icon_night]
 
-  return <ReactIcon />
+  return (
+    <IconContext.Provider value={{
+      size: small ? "3.5em" : "12em",
+      className: small ? "small-icon" : "big-icon"
+    }}>
+      <WiIcon />
+    </IconContext.Provider>
+  )
 }
 
 export default Icon

@@ -36,8 +36,8 @@
     justify-content: flex-end;
 }
 
-#curret-weather-icon-div  {
-    padding-top: -100px;
+#current-weather-icon-div  {
+    margin-top: -1em;
 }
 
 #main-content-div {
@@ -94,11 +94,13 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding-top: 0.7em;
+    // padding-top: 0.7em;
+    margin-top: -0.2em;
+    justify-content: space-around;
 }
 
 .forecasts-div {
-    width: 25%;
+    width: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,7 +116,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-inline: 0.5em;
+    margin-inline: 0.7em;
 }
 
 .forecast-title {
@@ -126,8 +128,13 @@
 }
 
 .small-icon{
-    margin-bottom: 0px;
+    margin-bottom: 0.2em;
     color: rgba($color: #000000, $alpha: 0.6);
+}
+
+.big-icon{
+    padding: 0px;
+    color: #000000;
 }
 
 #current-temp-data {
@@ -140,10 +147,14 @@
     display: flex;
     flex-direction: row;
     padding-top: 3.3em;
+    // padding-left: 3em;
+    // padding-right: 5em;
+    // width: 100%;
+    // justify-content:space-evenly;
 }
 
 #forecast-middle-spacer {
-    width: 1em;
+    width: 2%;
 }
 
 .footer-title {
