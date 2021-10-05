@@ -4,7 +4,16 @@ import Icon from "./Icon";
 
 import { HiOutlineArrowNarrowUp, HiOutlineArrowNarrowDown } from "react-icons/hi";
 
-const CurrentWeather = ({isDay, data: {current_condition, current_temperature, today_min_temperature, today_max_temperature, current_condition_code}}) => (
+const CurrentWeather = ({
+    data: {
+        is_day, 
+        current_condition, 
+        current_temperature, 
+        today_min_temperature, 
+        today_max_temperature, 
+        current_condition_code
+    }}) => (
+
     <div id="current-weather-div">
 
     <p id="current-condition-title">{current_condition.toLowerCase()}</p>
@@ -42,7 +51,7 @@ const CurrentWeather = ({isDay, data: {current_condition, current_temperature, t
     </div>
 
     <div id="current-weather-icon-div">
-        <Icon isDay={isDay} conditionCode={current_condition_code} />
+        <Icon isDay={is_day} conditionCode={current_condition_code} />
     </div>
 
 </div>
