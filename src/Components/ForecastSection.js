@@ -2,18 +2,18 @@ import "./Global.scss";
 
 import ForecastWeather from "./ForecastWeather";
 
-function ForecastSection(props) {
+function ForecastSection({data: {dawn, morning, afternoon, night}}) {
 
     return (
         <div className="forecast-section-div">
 
-        <ForecastWeather data={props.data.dawn} name='dawn'/>
-        <ForecastWeather data={props.data.morning} name='morning'/>
+        <ForecastWeather data={dawn} name='dawn'/>
+        <ForecastWeather data={morning} name='morning'/>
 
         <div id="forecast-middle-spacer"/>
 
-        <ForecastWeather data={props.data.afternoon} name='afternoon'/>
-        <ForecastWeather data={props.data.night} name='night'/>
+        <ForecastWeather data={afternoon} name='afternoon'/>
+        <ForecastWeather data={night} name='night'/>
 
         </div>  
     );
