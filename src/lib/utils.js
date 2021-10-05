@@ -4,6 +4,10 @@ export function unitConvertKphMs(kph) {
     return Number.parseFloat(kph / 3.6).toFixed(2)
 }
 
+export function getHourFromTime(time) {
+    return new Date(time).getHours()
+}
+
 export function processApiData({ current, forecast }) {
     try {
 
@@ -51,17 +55,17 @@ function getForecastWeather({ forecast }) {
     }
 
     for (const hour of forecast.forecastday[0].hour) {
-        switch (hour.time.slice(11, -3)) {
-            case '03':
+        switch (getHourFromTime(hour.time)) {
+            case 3:
                 forecastWeather.dawn = getWeatherByHour(hour)
                 break;
-            case '09':
+            case 9:
                 forecastWeather.morning = getWeatherByHour(hour)
                 break;
-            case '15':
+            case 15:
                 forecastWeather.afternoon = getWeatherByHour(hour)
                 break;
-            case '21':
+            case 21:
                 forecastWeather.night = getWeatherByHour(hour)
                 break;
             default:
