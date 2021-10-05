@@ -21,7 +21,9 @@ class CityWeather extends React.Component {
         this.state = {
             cityName: this.props.location.pathname.slice(1),
             fetchingData: true,
-            weatherData: {}
+            weatherData: {},
+            background: 'black',
+            textColor: 'white'
         }
     }
 
@@ -31,8 +33,15 @@ class CityWeather extends React.Component {
 
         const weatherData = processApiData(response.data)
 
-        this.setState({ weatherData: weatherData, fetchingData: false })
-        }
+        this.setState({ weatherData: weatherData, fetchingData: false },
+            function () {
+                this.setState({
+                    background: getBackGroundColor(this.state.weatherData.currentWeather),
+                    textColor: getBackGroundColor(this.state.weatherData.currentWeather) !== 'snowy' ? 'white' : 'black'
+                })
+            }
+        )
+    }
 
     render() {
         return (
@@ -40,13 +49,15 @@ class CityWeather extends React.Component {
                 style={
                     this.state.fetchingData ?
                         {
-                            "backgroundColor": "pink"
+                            "backgroundColor": "black",
+                            "color": "white"
                         } : {
-                            "background": getBackGroundColor(this.state.weatherData.currentWeather)
+                            "background": this.state.background,
+                            "color": this.state.textColor
                         }
                 }
             >
-                <Navigation />
+                <Navigation color={this.state.textColor}/>
                 {
                     this.state.fetchingData ?
                         (

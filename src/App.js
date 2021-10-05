@@ -11,8 +11,8 @@ import Home from './Components/Home';
 function App() {
 
   const cities = [
-    'recife', 'olinda', 'gravata', 
-    'sao paulo', 'pequim', 'moscou', 'aomori'
+    'dallol', 'fairbanks', 'londres', 
+    'recife', 'vancouver', 'yakutsk',
   ]
 
   const routes = cities.map((city) =>

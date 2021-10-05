@@ -14,7 +14,7 @@ export const Icon = ({ small, isDay, conditionCode }) => {
 
   return (
     <IconContext.Provider value={{
-      size: small ? "3.5em" : "12em",
+      size: small ? "3.5em" : "10em",
       className: small ? "small-icon" : "big-icon"
     }}>
       <WiIcon />
