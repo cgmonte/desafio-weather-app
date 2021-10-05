@@ -18,7 +18,7 @@ $ echo {\"weather_api_key\": \"cole aqui a sua chave\"} > src/config.json
 ```
 $ docker-compose up
 ```
-A aplicação estará acessível no navegador no endereço [localhost:3000](http://localhost:3000)
+A aplicação estará acessível no navegador no endereço [localhost:8080](http://localhost:3000)
 
 Os scripts do npm descritos abaixo funcionam normalmente e também podem ser usados para executar a aplicação e rodar testes. 
 
