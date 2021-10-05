@@ -23,11 +23,11 @@ class CityWeather extends React.Component {
 
         const response = await weatherApiGetData({ city: this.state.cityName, days: 1 });
 
-        const weatherData = weatherApiProcessData({weatherApiResponse: response})
+        const weatherData = weatherApiProcessData({data: response.data})
 
         this.setState({ weatherData: weatherData, fetchingData: false },
             function () {
-                // console.log(this.state.weatherData)
+                console.log(this.state.weatherData)
             }
         )
     }

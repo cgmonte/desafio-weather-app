@@ -1,4 +1,4 @@
-import * as utils from "../../lib/utils";
+import { unitConvertKphMs } from "../../lib/utils";
 
 const axios = require('axios');
 
@@ -17,66 +17,58 @@ export async function weatherApiGetData({ city, days }) {
     }
 }
 
-export function weatherApiProcessData({ weatherApiResponse }) {
+function getWeatherByHour({condition: {icon, code}, is_day, temp_c}) {
+    return {
+        icon_url: icon,
+        condition_code: code,
+        is_day: is_day,
+        temperature: temp_c
+    }
+}
+
+export function weatherApiProcessData({ data }) {
     try {
         const currentWeather = {
-            'last_updated': weatherApiResponse.data.current.last_updated,
-            'is_day': weatherApiResponse.data.current.is_day,
-            'current_condition': weatherApiResponse.data.current.condition.text,
-            'current_condition_code': weatherApiResponse.data.current.condition.code,
-            'current_temperature': weatherApiResponse.data.current.temp_c,
-            'today_min_temperature': weatherApiResponse.data.forecast.forecastday[0].day.mintemp_c,
-            'today_max_temperature': weatherApiResponse.data.forecast.forecastday[0].day.maxtemp_c,
+            'last_updated': data.current.last_updated,
+            'is_day': data.current.is_day,
+            'current_condition': data.current.condition.text,
+            'current_condition_code': data.current.condition.code,
+            'current_temperature': data.current.temp_c,
+            'today_min_temperature': data.forecast.forecastday[0].day.mintemp_c,
+            'today_max_temperature': data.forecast.forecastday[0].day.maxtemp_c,
         }
-
-        let forecastWeather = {
+        const forecastWeather = {
             dawn: {},
             morning: {},
             afternoon: {},
             night: {},
         }
-
-        for (const hour of weatherApiResponse.data.forecast.forecastday[0].hour) {
+        for (const hour of data.forecast.forecastday[0].hour) {
             switch (hour.time.slice(11, -3)) {
                 case '03':
-                    forecastWeather.dawn['icon_url'] = hour.condition.icon
-                    forecastWeather.dawn['condition_code'] = hour.condition.code
-                    forecastWeather.dawn['is_day'] = hour.is_day
-                    forecastWeather.dawn['temperature'] = hour.temp_c
+                    forecastWeather.dawn = getWeatherByHour(hour)
                     break;
                 case '09':
-                    forecastWeather.morning['icon_url'] = hour.condition.icon
-                    forecastWeather.morning['condition_code'] = hour.condition.code
-                    forecastWeather.morning['is_day'] = hour.is_day
-                    forecastWeather.morning['temperature'] = hour.temp_c
+                    forecastWeather.morning = getWeatherByHour(hour)
                     break;
                 case '15':
-                    forecastWeather.afternoon['icon_url'] = hour.condition.icon
-                    forecastWeather.afternoon['condition_code'] = hour.condition.code
-                    forecastWeather.afternoon['is_day'] = hour.is_day                    
-                    forecastWeather.afternoon['temperature'] = hour.temp_c
+                    forecastWeather.afternoon = getWeatherByHour(hour)
                     break;
                 case '21':
-                    forecastWeather.night['icon_url'] = hour.condition.icon
-                    forecastWeather.night['condition_code'] = hour.condition.code
-                    forecastWeather.night['is_day'] = hour.is_day     
-                    forecastWeather.night['temperature'] = hour.temp_c
+                    forecastWeather.night = getWeatherByHour(hour)
                     break;
                 default:
                     break;
             }
         }
-
         const otherInfo = {
-            'current_humidity': weatherApiResponse.data.current.humidity,
-            'current_wind_speed': utils.unitConvertKphMs(weatherApiResponse.data.current.wind_kph),
-            'today_sunrise': weatherApiResponse.data.forecast.forecastday[0].astro.sunrise,
-            'today_sunset': weatherApiResponse.data.forecast.forecastday[0].astro.sunset
+            'current_humidity': data.current.humidity,
+            'current_wind_speed': unitConvertKphMs(data.current.wind_kph),
+            'today_sunrise': data.forecast.forecastday[0].astro.sunrise,
+            'today_sunset': data.forecast.forecastday[0].astro.sunset
         }
-
-        const weatherData = { currentWeather, forecastWeather, otherInfo }
-        return weatherData;
+        return { currentWeather, forecastWeather, otherInfo }
     } catch (error) {
-        console.error(error);
+        console.error(error)
     }
 }
