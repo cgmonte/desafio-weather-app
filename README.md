@@ -4,19 +4,19 @@ Para rodar esta aplicação com o Docker, siga os passos:
 
 1. Clone este repositório
 ```
-$ git clone https://github.com/cgmonte/desafio-weather-app.git
+git clone https://github.com/cgmonte/desafio-weather-app.git
 ```
 2. Entre no repositório clonado:
 ```
-$ cd desafio-weather-app
+cd desafio-weather-app
 ```
 3. Crie um arquivo config.json contendo uma chave de acesso ao [Weather API](https://www.weatherapi.com/) na pasta src:
 ```
-$ echo {\"weather_api_key\": \"cole aqui a sua chave\"} > src/config.json
+echo {\"weather_api_key\": \"cole aqui a sua chave\"} > src/config.json
 ```
 4. Rode a aplicação com o docker compose:
 ```
-$ docker-compose up
+docker-compose up
 ```
 A aplicação estará acessível no navegador no endereço [localhost:8080](http://localhost:3000)
 
