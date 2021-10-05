@@ -29,7 +29,7 @@ const CurrentWeather = ({
                 <p>&deg;C</p>
             </div>
 
-            <div className="grow-box"></div>
+            <div className="grow-box"/>
 
             <div className="current-max-data">
 
