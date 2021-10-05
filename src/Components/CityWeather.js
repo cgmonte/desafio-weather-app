@@ -12,6 +12,8 @@ import Navigation from "./Navigation";
 
 import "./Global.scss";
 
+// import { useMediaQuery } from 'react-responsive'
+
 class CityWeather extends React.Component {
     constructor(props) {
         super(props);
@@ -22,7 +24,11 @@ class CityWeather extends React.Component {
         }
     }
 
+    // static contextType = this.props.mediaContext;
+
     async componentDidMount() {
+
+        // console.log('media context', this.context)
 
         const response = await weatherApiGetData({ city: this.state.cityName, days: 1 });
 
@@ -30,7 +36,9 @@ class CityWeather extends React.Component {
 
         this.setState({ weatherData: weatherData, fetchingData: false },
             function () {
-                console.log(this.state.weatherData)
+                console.log(this.state.weatherData);
+                console.log(this.context)
+                // console.log(contextType)
             }
         )
     }

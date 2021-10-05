@@ -1,27 +1,19 @@
-* { padding: 0; 
+* {
+    padding: 0;
     margin: 0;
 }
 
-// body {
-//     background-image: url('../images/mobile_ref1.png');
-//     background-size:     cover;
-//     background-repeat:   no-repeat;
-//     background-position: top center;    
-// }
-
-#root {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    height: 100px;
+@media only screen and (max-width: 361px) {
+    body {
+        font-size: 0.75em;
+    }
 }
 
-#outer-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    height: 100px;
+@media only screen and (max-width: 290px) {
+    body {
+        font-size: 0.6em;
+        margin-bottom: 3em;
+    }
 }
 
 #city-name {
@@ -30,20 +22,14 @@
 }
 
 #back-link-icon {
-    // padding-left: 0.1em;
     padding-top: 1em;
     padding-bottom: 1em;
+    padding-left: 1em;
     width: calc(100% - 2.1em);
 }
 
 .grow-box {
     flex-grow: 1;
-}
-
-#current-temp-data { padding: 0; 
-    margin: 0; 
-    margin-block-start: 1em;
-    margin-block-end: 1em;
 }
 
 #current-temp-details {
@@ -52,7 +38,7 @@
     justify-content: flex-end;
 }
 
-#current-weather-icon-div  {
+#current-weather-icon-div {
     margin-top: -1em;
 }
 
@@ -113,15 +99,13 @@
     margin-top: -0.2em;
     justify-content: center;
     align-content: center;
-    // padding-left: 1em;
-    // padding-right: 1em;
 }
 
 .forecasts-div {
     width: fit-content;
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
 }
 
 .forecast-data {
@@ -139,18 +123,17 @@
 
 .forecast-title {
     margin-bottom: -0.01em;
-    padding-bottom: 0px ;
+    padding-bottom: 0px;
     padding-top: -10px;
     color: rgba($color: #000000, $alpha: 0.6);
-
 }
 
-.small-icon{
+.small-icon {
     margin-bottom: 0.2em;
     color: rgba($color: #000000, $alpha: 0.6);
 }
 
-.big-icon{
+.big-icon {
     padding: 0px;
     color: #000000;
 }
@@ -165,11 +148,8 @@
     display: flex;
     flex-direction: row;
     padding-top: 3.3em;
-    // padding-left: 3em;
-    // padding-right: 5em;
     width: 100vw;
     justify-content: center;
-    // justify-content:space-evenly;
 }
 
 #forecast-middle-spacer {
@@ -192,4 +172,4 @@
     height: 1.5em;
     margin-top: 0.8em;
     margin-inline: 0.12em;
-  }
+}
