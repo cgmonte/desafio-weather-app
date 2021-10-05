@@ -2,8 +2,5 @@ version: '3.8'
 services:
   web:
     build: .
-    command: npm start
-    volumes:
-      - .:/weather_app
     ports:
-      - "3000:3000"
+      - "8080:80"
