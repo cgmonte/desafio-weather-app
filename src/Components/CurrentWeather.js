@@ -16,7 +16,7 @@ const CurrentWeather = ({
 
     <div id="current-weather-div">
 
-    <p id="current-condition-title">{current_condition.toLowerCase()}</p>
+    <p className="main-subtitle-name">{current_condition.toLowerCase()}</p>
 
     <div id="current-weather-info-div">
 

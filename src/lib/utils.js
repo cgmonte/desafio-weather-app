@@ -2,14 +2,14 @@ export function unitConvertKphMs(kph) {
     return Number.parseFloat(kph / 3.6).toFixed(2)
 }
 
-export function processApiData({current, forecast}) {
+export function processApiData({ current, forecast }) {
     try {
-        
-        const currentWeather = getCurrentWeather({current, forecast})
 
-        const forecastWeather = getForecastWeather({forecast})
+        const currentWeather = getCurrentWeather({ current, forecast })
 
-        const otherInfo = getOtherInfo({current, forecast})
+        const forecastWeather = getForecastWeather({ forecast })
+
+        const otherInfo = getOtherInfo({ current, forecast })
 
         return { currentWeather, forecastWeather, otherInfo }
 
@@ -18,7 +18,7 @@ export function processApiData({current, forecast}) {
     }
 }
 
-function getCurrentWeather({current, forecast}) {
+function getCurrentWeather({ current, forecast }) {
     return {
         last_updated: current.last_updated,
         is_day: current.is_day,
@@ -30,7 +30,7 @@ function getCurrentWeather({current, forecast}) {
     }
 }
 
-function getOtherInfo({current, forecast: {forecastday}}) {
+function getOtherInfo({ current, forecast: { forecastday } }) {
     return {
         current_humidity: current.humidity,
         current_wind_speed: unitConvertKphMs(current.wind_kph),
@@ -39,7 +39,7 @@ function getOtherInfo({current, forecast: {forecastday}}) {
     }
 }
 
-function getForecastWeather({forecast}) {
+function getForecastWeather({ forecast }) {
 
     const forecastWeather = {
         dawn: {},
@@ -70,11 +70,15 @@ function getForecastWeather({forecast}) {
     return forecastWeather
 }
 
-function getWeatherByHour({condition: {icon, code}, is_day, temp_c}) {
+function getWeatherByHour({ condition: { icon, code }, is_day, temp_c }) {
     return {
         icon_url: icon,
         condition_code: code,
         is_day: is_day,
         temperature: temp_c
     }
+}
+
+export function firstLetterUppercase(name) {
+    return name.charAt(0).toUpperCase() + name.slice(1);
 }

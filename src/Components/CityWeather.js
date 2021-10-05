@@ -9,11 +9,12 @@ import CurrentWeather from "./CurrentWeather";
 import ForecastSection from "./ForecastSection";
 import FooterInfo from "./FooterInfo";
 import Navigation from "./Navigation";
+import { CgSpinner } from 'react-icons/cg';
+
+import { IconContext } from "react-icons"
+
 
 import "./Global.scss";
-
-// import { useMediaQuery } from 'react-responsive'
-
 class CityWeather extends React.Component {
     constructor(props) {
         super(props);
@@ -24,23 +25,13 @@ class CityWeather extends React.Component {
         }
     }
 
-    // static contextType = this.props.mediaContext;
-
     async componentDidMount() {
-
-        // console.log('media context', this.context)
 
         const response = await weatherApiGetData({ city: this.state.cityName, days: 1 });
 
         const weatherData = processApiData(response.data)
 
-        this.setState({ weatherData: weatherData, fetchingData: false },
-            function () {
-                console.log(this.state.weatherData);
-                console.log(this.context)
-                // console.log(contextType)
-            }
-        )
+        this.setState({ weatherData: weatherData, fetchingData: false })
     }
 
     render() {
@@ -49,12 +40,19 @@ class CityWeather extends React.Component {
                 <Navigation />
                 {this.state.fetchingData ?
                     (
-                        <h2> Loading data </h2>
+                            <div id="outer-spinner-div">
+                                <IconContext.Provider value={{
+                                    size: "4em",
+                                    className: "spinner-icon"
+                                }}>
+                                    <CgSpinner />
+                                </IconContext.Provider>
+                            </div>
                     ) : (
 
-                        <div id="main-content-div">
+                        <div className="main-content-div">
 
-                            <p id="city-name"> {this.state.cityName.toUpperCase()} </p>
+                            <p className="main-title-name"> {this.state.cityName.toUpperCase()} </p>
 
                             <CurrentWeather data={this.state.weatherData.currentWeather} />
 

@@ -16,10 +16,73 @@
     }
 }
 
-#city-name {
+#outer-home-div {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-home-content-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home-links-outer-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 21em;
+
+}
+
+.home-links {
+    color: black;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+.city-link-outer-div {
+    margin: 0.9em;
+}
+
+.main-title-name {
     font-size: 2.3em;
     margin-top: 0.15em;
 }
+
+.home-icon {
+    // stroke-width: 1px;
+    padding-top: 1.4em;
+    padding-bottom: 1.8em;
+    color: #000000;
+}
+
+#outer-spinner-div {
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+}
+
+.spinner-icon{
+    animation: spin infinite 1s linear;
+    outline-width: 10em;
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 
 #back-link-icon {
     padding-top: 1em;
@@ -42,12 +105,14 @@
     margin-top: -1em;
 }
 
-#main-content-div {
+.main-content-div {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100vw;
 }
+
+
 
 #current-weather-div {
     display: flex;
@@ -56,7 +121,7 @@
     width: 100vw;
 }
 
-#current-condition-title {
+.main-subtitle-name {
     text-align: center;
     font-size: 1.4em;
     padding-top: 0.12em;
@@ -134,6 +199,7 @@
 }
 
 .big-icon {
+    // stroke-width: 1px;
     padding: 0px;
     color: #000000;
 }
