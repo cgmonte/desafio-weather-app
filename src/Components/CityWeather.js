@@ -1,5 +1,8 @@
 import React from "react";
-import { weatherApiGetData, weatherApiProcessData } from "../ExternalAPIs/Weather/WeatherAPI";
+import { weatherApiGetData } from "../ExternalAPIs/Weather/WeatherAPI";
+import { processApiData } from "../lib/utils";
+
+
 import { withRouter } from 'react-router-dom';
 
 import CurrentWeather from "./CurrentWeather";
@@ -23,7 +26,7 @@ class CityWeather extends React.Component {
 
         const response = await weatherApiGetData({ city: this.state.cityName, days: 1 });
 
-        const weatherData = weatherApiProcessData({data: response.data})
+        const weatherData = processApiData(response.data)
 
         this.setState({ weatherData: weatherData, fetchingData: false },
             function () {
