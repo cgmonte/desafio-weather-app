@@ -14,7 +14,11 @@ cd desafio-weather-app
 ```
 echo {\"weather_api_key\": \"cole aqui a sua chave\"} > src/config.json
 ```
-4. Rode a aplicação com o docker compose:
+4. Instale os pacotes do node e faça um build da aplicação:
+```
+npm install && npm run build
+```
+5. Rode a aplicação com o docker compose:
 ```
 docker-compose up
 ```
