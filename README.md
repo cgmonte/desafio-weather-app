@@ -1,8 +1,28 @@
-# Getting Started with Create React App
+# Desafio Criativo_Front: Weather App! 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Para rodar esta aplicação com o Docker, siga os passos:
 
-## Available Scripts
+1. Clone este repositório
+```
+$ git clone https://github.com/cgmonte/desafio-weather-app.git
+```
+2. Entre no repositório clonado:
+```
+$ cd desafio-weather-app
+```
+3. Crie um arquivo config.json contendo uma chave de acesso ao [Weather API](https://www.weatherapi.com/) na pasta src:
+```
+$ echo {\"weather_api_key\": \"cole aqui a sua chave\"} > src/config.json
+```
+4. Rode a aplicação com o docker compose:
+```
+$ docker-compose up
+```
+A aplicação estará acessível no navegador no endereço [localhost:3000](http://localhost:3000)
+
+Os scripts do npm descritos abaixo funcionam normalmente e também podem ser usados para executar a aplicação e rodar testes. 
+
+## Available npm Scripts
 
 In the project directory, you can run:
 
