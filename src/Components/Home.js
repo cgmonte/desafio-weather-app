@@ -1,18 +1,17 @@
 import React from "react";
 
-import { withRouter } from 'react-router-dom';
-
+import { Link, withRouter } from 'react-router-dom';
 class Home extends React.Component {
     constructor(props) {
         super(props)
         this.links = this.props.cities.map((city) =>
             <div key={city}>
-                <a
-                    href={"/" + city}
+                <Link
+                    to={`/${city}`}
                     className="home-links"
                 >
                     {city}
-                </a>
+                </Link>
             </div>
         );
     }

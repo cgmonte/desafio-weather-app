@@ -8,7 +8,7 @@ import Home from './Components/Home';
 
 function App() {
 
-  const cities = ['fairbanks', 'londres', 'recife', 'vancouver', 'yakutsk', 'sidney', 'pekin']
+  const cities = ['fairbanks', 'londres', 'recife', 'vancouver', 'yakutsk']
 
   const routes = cities.map((city) =>
     <Route path={'/' + city} key={city}>
