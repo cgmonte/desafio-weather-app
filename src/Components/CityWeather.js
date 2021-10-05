@@ -1,6 +1,6 @@
 import React from "react";
 import { weatherApiGetData } from "../ExternalAPIs/Weather/WeatherAPI";
-import { processApiData } from "../lib/utils";
+import { processApiData, getBackGroundColor } from "../lib/utils";
 
 
 import { withRouter } from 'react-router-dom';
@@ -32,14 +32,24 @@ class CityWeather extends React.Component {
         const weatherData = processApiData(response.data)
 
         this.setState({ weatherData: weatherData, fetchingData: false })
-    }
+        }
 
     render() {
         return (
-            <div id="outer-div">
+            <div id="outer-div"
+                style={
+                    this.state.fetchingData ?
+                        {
+                            "backgroundColor": "pink"
+                        } : {
+                            "background": getBackGroundColor(this.state.weatherData.currentWeather)
+                        }
+                }
+            >
                 <Navigation />
-                {this.state.fetchingData ?
-                    (
+                {
+                    this.state.fetchingData ?
+                        (
                             <div id="outer-spinner-div">
                                 <IconContext.Provider value={{
                                     size: "4em",
@@ -48,21 +58,22 @@ class CityWeather extends React.Component {
                                     <CgSpinner />
                                 </IconContext.Provider>
                             </div>
-                    ) : (
+                        ) : (
 
-                        <div className="main-content-div">
+                            <div className="main-content-div">
 
-                            <p className="main-title-name"> {this.state.cityName.toUpperCase()} </p>
+                                <p className="main-title-name"> {this.state.cityName.toUpperCase()} </p>
 
-                            <CurrentWeather data={this.state.weatherData.currentWeather} />
+                                <CurrentWeather data={this.state.weatherData.currentWeather} />
 
-                            <ForecastSection data={this.state.weatherData.forecastWeather} />
+                                <ForecastSection data={this.state.weatherData.forecastWeather} />
 
-                            <FooterInfo data={this.state.weatherData.otherInfo} />
+                                <FooterInfo data={this.state.weatherData.otherInfo} />
 
-                        </div>
-                    )}
-            </div>
+                            </div>
+                        )
+                }
+            </div >
         );
     }
 }

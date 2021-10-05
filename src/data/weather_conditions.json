@@ -1,386 +1,482 @@
 [
 	{
-		"code" : 1000,
-		"day" : "Sunny",
-		"night" : "Clear",
-		"icon" : 113,
+		"code": 1000,
+		"day": "Sunny",
+		"night": "Clear",
+		"icon": 113,
 		"react_icon_day": "WiDaySunny",
-		"react_icon_night": "WiNightClear"	
+		"react_icon_night": "WiNightClear",
+		"day_background": "clearDay",
+		"night_background": "clearNight"
 	},
 	{
-		"code" : 1003,
-		"day" : "Partly cloudy",
-		"night" : "Partly cloudy",
-		"icon" : 116,
+		"code": 1003,
+		"day": "Partly cloudy",
+		"night": "Partly cloudy",
+		"icon": 116,
 		"react_icon_day": "WiDayCloudy",
-		"react_icon_night": "WiNightAltCloudy"
+		"react_icon_night": "WiNightAltCloudy",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1006,
-		"day" : "Cloudy",
-		"night" : "Cloudy",
-		"icon" : 119,
+		"code": 1006,
+		"day": "Cloudy",
+		"night": "Cloudy",
+		"icon": 119,
 		"react_icon_day": "WiCloud",
-		"react_icon_night": "WiNightAltCloudy"
+		"react_icon_night": "WiNightAltCloudy",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1009,
-		"day" : "Overcast",
-		"night" : "Overcast",
-		"icon" : 122,
+		"code": 1009,
+		"day": "Overcast",
+		"night": "Overcast",
+		"icon": 122,
 		"react_icon_day": "WiCloudy",
-		"react_icon_night": "WiCloudy"
+		"react_icon_night": "WiCloudy",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1030,
-		"day" : "Mist",
-		"night" : "Mist",
-		"icon" : 143,
+		"code": 1030,
+		"day": "Mist",
+		"night": "Mist",
+		"icon": 143,
 		"react_icon_day": "WiFog",
-		"react_icon_night": "WiFog"
+		"react_icon_night": "WiFog",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1063,
-		"day" : "Patchy rain possible",
-		"night" : "Patchy rain possible",
-		"icon" : 176,
+		"code": 1063,
+		"day": "Patchy rain possible",
+		"night": "Patchy rain possible",
+		"icon": 176,
 		"react_icon_day": "WiDayRainMix",
-		"react_icon_night": "WiNightAltRainMix"
+		"react_icon_night": "WiNightAltRainMix",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1066,
-		"day" : "Patchy snow possible",
-		"night" : "Patchy snow possible",
-		"icon" : 179,
+		"code": 1066,
+		"day": "Patchy snow possible",
+		"night": "Patchy snow possible",
+		"icon": 179,
 		"react_icon_day": "WiDaySnow",
-		"react_icon_night": "WiNightSnow"
+		"react_icon_night": "WiNightSnow",
+		"day_background": "snowy",
+		"night_background": "snowy"
 	},
 	{
-		"code" : 1069,
-		"day" : "Patchy sleet possible",
-		"night" : "Patchy sleet possible",
-		"icon" : 182,
+		"code": 1069,
+		"day": "Patchy sleet possible",
+		"night": "Patchy sleet possible",
+		"icon": 182,
 		"react_icon_day": "WiDaySleet",
-		"react_icon_night": "WiNightSleet"
+		"react_icon_night": "WiNightSleet",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1072,
-		"day" : "Patchy freezing drizzle possible",
-		"night" : "Patchy freezing drizzle possible",
-		"icon" : 185,
+		"code": 1072,
+		"day": "Patchy freezing drizzle possible",
+		"night": "Patchy freezing drizzle possible",
+		"icon": 185,
 		"react_icon_day": "WiRainMix",
-		"react_icon_night": "WiRainMix"
+		"react_icon_night": "WiRainMix",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1087,
-		"day" : "Thundery outbreaks possible",
-		"night" : "Thundery outbreaks possible",
-		"icon" : 200,
+		"code": 1087,
+		"day": "Thundery outbreaks possible",
+		"night": "Thundery outbreaks possible",
+		"icon": 200,
 		"react_icon_day": "WiDayThunderstorm",
-		"react_icon_night": "WiNightThunderstorm"
+		"react_icon_night": "WiNightThunderstorm",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1114,
-		"day" : "Blowing snow",
-		"night" : "Blowing snow",
-		"icon" : 227,
+		"code": 1114,
+		"day": "Blowing snow",
+		"night": "Blowing snow",
+		"icon": 227,
 		"react_icon_day": "WiSnowWind",
-		"react_icon_night": "WiSnowWind"
+		"react_icon_night": "WiSnowWind",
+		"day_background": "snowy",
+		"night_background": "snowy"
 	},
 	{
-		"code" : 1117,
-		"day" : "Blizzard",
-		"night" : "Blizzard",
-		"icon" : 230,
+		"code": 1117,
+		"day": "Blizzard",
+		"night": "Blizzard",
+		"icon": 230,
 		"react_icon_day": "WiSnowWind",
-		"react_icon_night": "WiSnowWind"
+		"react_icon_night": "WiSnowWind",
+		"day_background": "snowy",
+		"night_background": "snowy"
 	},
 	{
-		"code" : 1135,
-		"day" : "Fog",
-		"night" : "Fog",
-		"icon" : 248,
+		"code": 1135,
+		"day": "Fog",
+		"night": "Fog",
+		"icon": 248,
 		"react_icon_day": "WiFog",
-		"react_icon_night": "WiFog"
+		"react_icon_night": "WiFog",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1147,
-		"day" : "Freezing fog",
-		"night" : "Freezing fog",
-		"icon" : 260,
+		"code": 1147,
+		"day": "Freezing fog",
+		"night": "Freezing fog",
+		"icon": 260,
 		"react_icon_day": "WiSnowWind",
-		"react_icon_night": "WiSnowWind"
+		"react_icon_night": "WiSnowWind",
+		"day_background": "snowy",
+		"night_background": "snowy"
 	},
 	{
-		"code" : 1150,
-		"day" : "Patchy light drizzle",
-		"night" : "Patchy light drizzle",
-		"icon" : 263,
+		"code": 1150,
+		"day": "Patchy light drizzle",
+		"night": "Patchy light drizzle",
+		"icon": 263,
 		"react_icon_day": "WiRainMix",
-		"react_icon_night": "WiRainMix"
+		"react_icon_night": "WiRainMix",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1153,
-		"day" : "Light drizzle",
-		"night" : "Light drizzle",
-		"icon" : 266,
+		"code": 1153,
+		"day": "Light drizzle",
+		"night": "Light drizzle",
+		"icon": 266,
 		"react_icon_day": "WiRainMix",
-		"react_icon_night": "WiRainMix"
+		"react_icon_night": "WiRainMix",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1168,
-		"day" : "Freezing drizzle",
-		"night" : "Freezing drizzle",
-		"icon" : 281,
+		"code": 1168,
+		"day": "Freezing drizzle",
+		"night": "Freezing drizzle",
+		"icon": 281,
 		"react_icon_day": "WiRainMix",
-		"react_icon_night": "WiRainMix"
+		"react_icon_night": "WiRainMix",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1171,
-		"day" : "Heavy freezing drizzle",
-		"night" : "Heavy freezing drizzle",
-		"icon" : 284,
+		"code": 1171,
+		"day": "Heavy freezing drizzle",
+		"night": "Heavy freezing drizzle",
+		"icon": 284,
 		"react_icon_day": "WiRainMix",
-		"react_icon_night": "WiRainMix"
+		"react_icon_night": "WiRainMix",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1180,
-		"day" : "Patchy light rain",
-		"night" : "Patchy light rain",
-		"icon" : 293,
+		"code": 1180,
+		"day": "Patchy light rain",
+		"night": "Patchy light rain",
+		"icon": 293,
 		"react_icon_day": "WiDayRainMix",
-		"react_icon_night": "WiNightAltRainMix"
+		"react_icon_night": "WiNightAltRainMix",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1183,
-		"day" : "Light rain",
-		"night" : "Light rain",
-		"icon" : 296,
+		"code": 1183,
+		"day": "Light rain",
+		"night": "Light rain",
+		"icon": 296,
 		"react_icon_day": "WiRainMix",
-		"react_icon_night": "WiRainMix"
+		"react_icon_night": "WiRainMix",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1186,
-		"day" : "Moderate rain at times",
-		"night" : "Moderate rain at times",
-		"icon" : 299,
+		"code": 1186,
+		"day": "Moderate rain at times",
+		"night": "Moderate rain at times",
+		"icon": 299,
 		"react_icon_day": "WiDayRainMix",
-		"react_icon_night": "WiNightAltRainMix"
+		"react_icon_night": "WiNightAltRainMix",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1189,
-		"day" : "Moderate rain",
-		"night" : "Moderate rain",
-		"icon" : 302,
+		"code": 1189,
+		"day": "Moderate rain",
+		"night": "Moderate rain",
+		"icon": 302,
 		"react_icon_day": "WiRainMix",
-		"react_icon_night": "WiRainMix"
+		"react_icon_night": "WiRainMix",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1192,
-		"day" : "Heavy rain at times",
-		"night" : "Heavy rain at times",
-		"icon" : 305,
+		"code": 1192,
+		"day": "Heavy rain at times",
+		"night": "Heavy rain at times",
+		"icon": 305,
 		"react_icon_day": "WiDayRain",
-		"react_icon_night": "WiNightAltRain"
+		"react_icon_night": "WiNightAltRain",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1195,
-		"day" : "Heavy rain",
-		"night" : "Heavy rain",
-		"icon" : 308,
+		"code": 1195,
+		"day": "Heavy rain",
+		"night": "Heavy rain",
+		"icon": 308,
 		"react_icon_day": "WiRain",
-		"react_icon_night": "WiRain"
+		"react_icon_night": "WiRain",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1198,
-		"day" : "Light freezing rain",
-		"night" : "Light freezing rain",
-		"icon" : 311,
+		"code": 1198,
+		"day": "Light freezing rain",
+		"night": "Light freezing rain",
+		"icon": 311,
 		"react_icon_day": "WiRainMix",
-		"react_icon_night": "WiRainMix"
+		"react_icon_night": "WiRainMix",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1201,
-		"day" : "Moderate or heavy freezing rain",
-		"night" : "Moderate or heavy freezing rain",
-		"icon" : 314,
+		"code": 1201,
+		"day": "Moderate or heavy freezing rain",
+		"night": "Moderate or heavy freezing rain",
+		"icon": 314,
 		"react_icon_day": "WiRainMix",
-		"react_icon_night": "WiRainMix"
+		"react_icon_night": "WiRainMix",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1204,
-		"day" : "Light sleet",
-		"night" : "Light sleet",
-		"icon" : 317,
+		"code": 1204,
+		"day": "Light sleet",
+		"night": "Light sleet",
+		"icon": 317,
 		"react_icon_day": "WiSleet",
-		"react_icon_night": "WiSleet"
+		"react_icon_night": "WiSleet",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1207,
-		"day" : "Moderate or heavy sleet",
-		"night" : "Moderate or heavy sleet",
-		"icon" : 320,
+		"code": 1207,
+		"day": "Moderate or heavy sleet",
+		"night": "Moderate or heavy sleet",
+		"icon": 320,
 		"react_icon_day": "WiSleet",
-		"react_icon_night": "WiSleet"
+		"react_icon_night": "WiSleet",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1210,
-		"day" : "Patchy light snow",
-		"night" : "Patchy light snow",
-		"icon" : 323,
+		"code": 1210,
+		"day": "Patchy light snow",
+		"night": "Patchy light snow",
+		"icon": 323,
 		"react_icon_day": "WiDaySnow",
-		"react_icon_night": "WiNightAltSnow"
+		"react_icon_night": "WiNightAltSnow",
+		"day_background": "snowy",
+		"night_background": "snowy"
 	},
 	{
-		"code" : 1213,
-		"day" : "Light snow",
-		"night" : "Light snow",
-		"icon" : 326,
+		"code": 1213,
+		"day": "Light snow",
+		"night": "Light snow",
+		"icon": 326,
 		"react_icon_day": "WiSnow",
-		"react_icon_night": "WiSnow"
+		"react_icon_night": "WiSnow",
+		"day_background": "snowy",
+		"night_background": "snowy"
 	},
 	{
-		"code" : 1216,
-		"day" : "Patchy moderate snow",
-		"night" : "Patchy moderate snow",
-		"icon" : 329,
+		"code": 1216,
+		"day": "Patchy moderate snow",
+		"night": "Patchy moderate snow",
+		"icon": 329,
 		"react_icon_day": "WiDaySnow",
-		"react_icon_night": "WiNightAltSnow"
+		"react_icon_night": "WiNightAltSnow",
+		"day_background": "snowy",
+		"night_background": "snowy"
 	},
 	{
-		"code" : 1219,
-		"day" : "Moderate snow",
-		"night" : "Moderate snow",
-		"icon" : 332,
+		"code": 1219,
+		"day": "Moderate snow",
+		"night": "Moderate snow",
+		"icon": 332,
 		"react_icon_day": "WiSnow",
-		"react_icon_night": "WiSnow"
+		"react_icon_night": "WiSnow",
+		"day_background": "snowy",
+		"night_background": "snowy"
 	},
 	{
-		"code" : 1222,
-		"day" : "Patchy heavy snow",
-		"night" : "Patchy heavy snow",
-		"icon" : 335,
+		"code": 1222,
+		"day": "Patchy heavy snow",
+		"night": "Patchy heavy snow",
+		"icon": 335,
 		"react_icon_day": "WiDaySnow",
-		"react_icon_night": "WiNightAltSnow"
+		"react_icon_night": "WiNightAltSnow",
+		"day_background": "snowy",
+		"night_background": "snowy"
 	},
 	{
-		"code" : 1225,
-		"day" : "Heavy snow",
-		"night" : "Heavy snow",
-		"icon" : 338,
+		"code": 1225,
+		"day": "Heavy snow",
+		"night": "Heavy snow",
+		"icon": 338,
 		"react_icon_day": "WiSnow",
-		"react_icon_night": "WiSnow"
+		"react_icon_night": "WiSnow",
+		"day_background": "snowy",
+		"night_background": "snowy"
 	},
 	{
-		"code" : 1237,
-		"day" : "Ice pellets",
-		"night" : "Ice pellets",
-		"icon" : 350,
+		"code": 1237,
+		"day": "Ice pellets",
+		"night": "Ice pellets",
+		"icon": 350,
 		"react_icon_day": "WiSnow",
-		"react_icon_night": "WiSnow"
+		"react_icon_night": "WiSnow",
+		"day_background": "snowy",
+		"night_background": "snowy"
 	},
 	{
-		"code" : 1240,
-		"day" : "Light rain shower",
-		"night" : "Light rain shower",
-		"icon" : 353,
+		"code": 1240,
+		"day": "Light rain shower",
+		"night": "Light rain shower",
+		"icon": 353,
 		"react_icon_day": "WiDayShowers",
-		"react_icon_night": "WiNightAltShowers"
+		"react_icon_night": "WiNightAltShowers",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1243,
-		"day" : "Moderate or heavy rain shower",
-		"night" : "Moderate or heavy rain shower",
-		"icon" : 356,
+		"code": 1243,
+		"day": "Moderate or heavy rain shower",
+		"night": "Moderate or heavy rain shower",
+		"icon": 356,
 		"react_icon_day": "WiDayShowers",
-		"react_icon_night": "WiNightAltShowers"
+		"react_icon_night": "WiNightAltShowers",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1246,
-		"day" : "Torrential rain shower",
-		"night" : "Torrential rain shower",
-		"icon" : 359,
+		"code": 1246,
+		"day": "Torrential rain shower",
+		"night": "Torrential rain shower",
+		"icon": 359,
 		"react_icon_day": "WiDayShowers",
-		"react_icon_night": "WiNightAltShowers"
+		"react_icon_night": "WiNightAltShowers",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1249,
-		"day" : "Light sleet showers",
-		"night" : "Light sleet showers",
-		"icon" : 362,
+		"code": 1249,
+		"day": "Light sleet showers",
+		"night": "Light sleet showers",
+		"icon": 362,
 		"react_icon_day": "WiDaySleet",
-		"react_icon_night": "WiNightAltSleet"
+		"react_icon_night": "WiNightAltSleet",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1252,
-		"day" : "Moderate or heavy sleet showers",
-		"night" : "Moderate or heavy sleet showers",
-		"icon" : 365,
+		"code": 1252,
+		"day": "Moderate or heavy sleet showers",
+		"night": "Moderate or heavy sleet showers",
+		"icon": 365,
 		"react_icon_day": "WiDaySleet",
-		"react_icon_night": "WiNightAltSleet"
+		"react_icon_night": "WiNightAltSleet",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1255,
-		"day" : "Light snow showers",
-		"night" : "Light snow showers",
-		"icon" : 368,
+		"code": 1255,
+		"day": "Light snow showers",
+		"night": "Light snow showers",
+		"icon": 368,
 		"react_icon_day": "WiDaySnow",
-		"react_icon_night": "WiNightAltSnow"
+		"react_icon_night": "WiNightAltSnow",
+		"day_background": "snowy",
+		"night_background": "snowy"
 	},
 	{
-		"code" : 1258,
-		"day" : "Moderate or heavy snow showers",
-		"night" : "Moderate or heavy snow showers",
-		"icon" : 371,
+		"code": 1258,
+		"day": "Moderate or heavy snow showers",
+		"night": "Moderate or heavy snow showers",
+		"icon": 371,
 		"react_icon_day": "WiDaySnow",
-		"react_icon_night": "WiNightAltSnow"
+		"react_icon_night": "WiNightAltSnow",
+		"day_background": "snowy",
+		"night_background": "snowy"
 	},
 	{
-		"code" : 1261,
-		"day" : "Light showers of ice pellets",
-		"night" : "Light showers of ice pellets",
-		"icon" : 374,
+		"code": 1261,
+		"day": "Light showers of ice pellets",
+		"night": "Light showers of ice pellets",
+		"icon": 374,
 		"react_icon_day": "WiDaySnow",
-		"react_icon_night": "WiNightAltSnow"
+		"react_icon_night": "WiNightAltSnow",
+		"day_background": "snowy",
+		"night_background": "snowy"
 	},
 	{
-		"code" : 1264,
-		"day" : "Moderate or heavy showers of ice pellets",
-		"night" : "Moderate or heavy showers of ice pellets",
-		"icon" : 377,
+		"code": 1264,
+		"day": "Moderate or heavy showers of ice pellets",
+		"night": "Moderate or heavy showers of ice pellets",
+		"icon": 377,
 		"react_icon_day": "WiDaySnow",
-		"react_icon_night": "WiNightAltSnow"
+		"react_icon_night": "WiNightAltSnow",
+		"day_background": "snowy",
+		"night_background": "snowy"
 	},
 	{
-		"code" : 1273,
-		"day" : "Patchy light rain with thunder",
-		"night" : "Patchy light rain with thunder",
-		"icon" : 386,
+		"code": 1273,
+		"day": "Patchy light rain with thunder",
+		"night": "Patchy light rain with thunder",
+		"icon": 386,
 		"react_icon_day": "WiDayThunderstorm",
-		"react_icon_night": "WiNightAltThunderstorm"
+		"react_icon_night": "WiNightAltThunderstorm",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1276,
-		"day" : "Moderate or heavy rain with thunder",
-		"night" : "Moderate or heavy rain with thunder",
-		"icon" : 389,
+		"code": 1276,
+		"day": "Moderate or heavy rain with thunder",
+		"night": "Moderate or heavy rain with thunder",
+		"icon": 389,
 		"react_icon_day": "WiThunderstorm",
-		"react_icon_night": "WiThunderstorm"
+		"react_icon_night": "WiThunderstorm",
+		"day_background": "rainy",
+		"night_background": "rainy"
 	},
 	{
-		"code" : 1279,
-		"day" : "Patchy light snow with thunder",
-		"night" : "Patchy light snow with thunder",
-		"icon" : 392,
+		"code": 1279,
+		"day": "Patchy light snow with thunder",
+		"night": "Patchy light snow with thunder",
+		"icon": 392,
 		"react_icon_day": "WiDaySnowThunderstorm",
-		"react_icon_night": "WiNightAltSnowThunderstorm"
+		"react_icon_night": "WiNightAltSnowThunderstorm",
+		"day_background": "snowy",
+		"night_background": "snowy"
 	},
 	{
-		"code" : 1282,
-		"day" : "Moderate or heavy snow with thunder",
-		"night" : "Moderate or heavy snow with thunder",
-		"icon" : 395,
+		"code": 1282,
+		"day": "Moderate or heavy snow with thunder",
+		"night": "Moderate or heavy snow with thunder",
+		"icon": 395,
 		"react_icon_day": "WiDaySnowThunderstorm",
-		"react_icon_night": "WiNightAltSnowThunderstorm"
+		"react_icon_night": "WiNightAltSnowThunderstorm",
+		"day_background": "snowy",
+		"night_background": "snowy"
 	}
 ]

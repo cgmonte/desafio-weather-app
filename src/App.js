@@ -12,7 +12,7 @@ function App() {
 
   const cities = [
     'recife', 'olinda', 'gravata', 
-    'sao paulo', 'pequim', 'moscou'
+    'sao paulo', 'pequim', 'moscou', 'aomori'
   ]
 
   const routes = cities.map((city) =>

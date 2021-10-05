@@ -16,6 +16,12 @@
     }
 }
 
+#outer-div {
+    height: 100vh;
+    // background: rgb(224, 224, 224);
+    // background: linear-gradient(180deg, rgba(224, 224, 224, 1) 0%, rgba(167, 167, 167, 1) 100%);
+}
+
 #outer-home-div {
     width: 100vw;
     height: 100vh;
@@ -35,7 +41,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 21em;
-
 }
 
 .home-links {
@@ -67,22 +72,21 @@
     justify-content: center;
     align-content: center;
     align-items: center;
-
 }
 
-.spinner-icon{
+.spinner-icon {
     animation: spin infinite 1s linear;
     outline-width: 10em;
 }
 
 @keyframes spin {
     from {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     to {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
+}
 
 #back-link-icon {
     padding-top: 1em;
@@ -111,8 +115,6 @@
     align-items: center;
     width: 100vw;
 }
-
-
 
 #current-weather-div {
     display: flex;
